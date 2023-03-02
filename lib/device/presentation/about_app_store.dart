@@ -5,11 +5,20 @@ import 'package:mobx/mobx.dart';
 
 part 'about_app_store.g.dart';
 
+/// Store responsável pelo processamento da página "AboutAppPage".
+///
+/// Possui relação direta com o gerenciamento de estado delagado ao MobX.
+///
+/// Informações adicionais:
+/// - [Pacote mobx](https://pub.dev/packages/mobx).
+/// - [Pacote mobx_codegen](https://pub.dev/packages/mobx_codegen).
+/// - [Pacote flutter_mobx](https://pub.dev/packages/flutter_mobx).
 class AboutAppStore = _AboutAppStoreBase with _$AboutAppStore;
 
 abstract class _AboutAppStoreBase with Store {
   _AboutAppStoreBase(this._getDeviceSpecsUsecase);
 
+  /// Caso-de-uso responsável por recuperar as especificações do dispositivo.
   final IGetDeviceSpecsUsecase _getDeviceSpecsUsecase;
 
   @readonly
@@ -27,6 +36,7 @@ abstract class _AboutAppStoreBase with Store {
   @readonly
   String? _manufacturer;
 
+  /// Efetua o processo de recuperação das configurações do dispositivo por meio do caso-de-uso [IGetDeviceSpecsUsecase].
   @action
   Future<void> load() async {
     try {

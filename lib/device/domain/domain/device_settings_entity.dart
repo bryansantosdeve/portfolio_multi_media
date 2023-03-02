@@ -1,3 +1,4 @@
+/// Entidade responsável por representar as configurações de um dispositivo mobile.
 class DeviceSettingsEntity {
   DeviceSettingsEntity(
       {required this.platform,
@@ -6,14 +7,19 @@ class DeviceSettingsEntity {
       required this.deviceName,
       required this.manufacturer});
 
+  /// Sistema operacional do dispositivo.
   final String platform;
 
+  /// Versão do sistema operacional do dispositivo.
   final String osVersion;
 
+  /// Identificação do dispositivo.
   final String deviceId;
 
+  /// Nome do dispositivo.
   final String deviceName;
 
+  /// Empresa responsável pela produção do dispositivo.
   final String manufacturer;
 
   /// HashCode individual de cada objeto para identificar identicidade entre dois ou mais.

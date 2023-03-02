@@ -6,25 +6,26 @@ import 'package:bryan_portfolio_dev/device/external/device_settings_driver.dart'
 import 'package:bryan_portfolio_dev/device/presentation/about_app_store.dart';
 import 'package:get_it/get_it.dart';
 
-class AppModule {
+/// Módulo do dispositivo responsável por injetar dependências durante a execução da aplicação.
+class DeviceModule {
   static void init() {
     final getIt = GetIt.instance;
 
-    // datasource
+    // datasources ou drivers.
     getIt.registerLazySingleton<IDeviceSettingsDriver>(
         () => DeviceSettingsDriver());
 
-    // services or repository
+    // serviços e repositórios.
     getIt.registerLazySingleton<IDeviceService>(
       () => DeviceServiceImpl(getIt()),
     );
 
-    // usecase
+    // casos-de-uso.
     getIt.registerLazySingleton<IGetDeviceSpecsUsecase>(
       () => GetDeviceUsecaseImpl(getIt()),
     );
 
-    // stores or controllers
+    // stores.
     getIt.registerFactory<AboutAppStore>(
       () => AboutAppStore(getIt()),
     );

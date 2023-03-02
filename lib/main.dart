@@ -1,9 +1,9 @@
-import 'package:bryan_portfolio_dev/app_module.dart';
+import 'package:bryan_portfolio_dev/device_module.dart';
 import 'package:bryan_portfolio_dev/device/presentation/about_app_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  AppModule.init();
+  DeviceModule.init();
   runApp(const MyApp());
 }
 

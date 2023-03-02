@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:get_it/get_it.dart';
 
+/// Página de informações do dispositivo.
 class AboutAppPage extends StatefulWidget {
   const AboutAppPage({super.key});
 
@@ -11,6 +12,7 @@ class AboutAppPage extends StatefulWidget {
 }
 
 class _AboutAppPageState extends State<AboutAppPage> {
+  /// Instância do store responsável por lidar com o processamento da página "AboutAppPage".
   final store = GetIt.I.get<AboutAppStore>();
 
   @override

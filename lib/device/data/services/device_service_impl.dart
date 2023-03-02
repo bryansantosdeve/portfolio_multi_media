@@ -8,6 +8,7 @@ import 'package:flutter/foundation.dart';
 class DeviceServiceImpl implements IDeviceService {
   DeviceServiceImpl(this._driver);
 
+  /// Driver responsável por recuperar diretamente as configurações e especificações gerais do dispositivo.
   final IDeviceSettingsDriver _driver;
   @override
   Future<DeviceSettingsEntity> getDeviceSpecs() async {

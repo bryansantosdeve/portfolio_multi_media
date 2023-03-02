@@ -7,12 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Documentação de código no módulo "Device".
+
 ## [0.1.0] - 2023-03-02
 
 ### Added
 
-- "About App" page developed. 
+- Implementação da página "Informações do Dispositivo".
 
-- Package additions: mobX v2.1.4, mobx_codegen v2.1.1, flutter_mobx v2.0.6+5, get_it v7.2.0.
+- Adição de packages: mobX v2.1.4, mobx_codegen v2.1.1, flutter_mobx v2.0.6+5, get_it v7.2.0.
 
-- Implemented initial setup of Device module. 
+- Implementação do módulo "Device".
